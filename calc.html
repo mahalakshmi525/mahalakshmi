@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script type="text/javascript">
+         function add() { 
+                      var x = Number(document.getElementById('value1').value);
+                      var y = Number(document.getElementById('value2').value);
+                      var z = x + y;
+                      document.getElementById("result").value=z;
+                      
+                      }
+            function sub() { 
+                    var x = Number(document.getElementById('value1').value);
+                    var y = Number(document.getElementById('value2').value);
+                    var z = x-y;
+                    document.getElementById("result").value=z;       
+                    }
+            function mul() { 
+                  var x = Number(document.getElementById('value1').value);
+                  var y= Number(document.getElementById('value2').value);
+                  var z = x*y;
+                  document.getElementById("result").value=z;
+                }
+            function div() { 
+                   var x = Number(document.getElementById('value1').value);
+                   var y= Number(document.getElementById('value2').value);
+                   var z= x/y;
+                   document.getElementById("result").value=z;
+                   }
+            function reset()
+                    {
+               
+               document.getElementById("result").value=" ";
+               document.getElementById("value1").value=" ";
+               document.getElementById("value2").value=" ";
+           }
+
+    
+    </script>
+    </head>
+    <body>
+        <center>
+            value1: <input type="text" id="value1">
+            value2: <input type="text" id="value2"> <br><br>
+             
+    </center>
+    <center>
+        
+            <input type="button" value="add" onclick="add()">
+            <input type="button" value="sub" onclick="sub()">
+            <input type="button" value="mul" onclick="mul()">
+            <input type="button" value="div" onclick="div()">
+            <input type="button"  value="reset" onclick="reset()"><br><br>
+       
+    </center>
+    <center>
+        result:<input type="text" id="result" >
+    </center>
+    
+    </body>
+</html>
