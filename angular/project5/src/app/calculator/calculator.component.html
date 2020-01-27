@@ -1,0 +1,20 @@
+
+ <div>
+     <label for="Value1"> enter value 1</label>
+     <input type="text" id="uvalue1" #uvalue1/>
+ </div> 
+ <div>
+    <label for="Value2"> enter value 2</label>
+    <input type="text" id="uvalue2" #uvalue2/>
+</div>
+<div>
+    <div class="row"></div>
+    <input type="button" value="+" (Click)="calculate(uvalue1,uvalue2)">
+    <input type="button" value="+" (Click)="calculate(uvalue1,uvalue2)">
+    <input type="button" value="+" (Click)="calculate(uvalue1,uvalue2)">
+    <input type="button" value="+" (Click)="calculate(uvalue1,uvalue2)">
+    <input type="button" value="+" (Click)="calculate(uvalue1,uvalue2)">
+</div>
+<div>
+    <div><h3>result</h3><input type="text" value="{{result}}" /></div>
+</div>

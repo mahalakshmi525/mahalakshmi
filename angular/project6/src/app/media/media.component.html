@@ -1,0 +1,25 @@
+<div>
+    <h1>Media details</h1>
+    <div>
+        <div class="row"></div>
+        <div class="cols"><label for="Title">Title</label> <input type="text" id="utitle" #txttitle/>
+        </div> 
+      <div>
+        <div class="row"></div>
+        <div class="cols"><label for="Description">Description</label><input type="text" id="udescription" #txtdescription/></div>  
+      <div>
+        <div class="row"></div>
+        <div class="cols"><label for="tag">Tag</label><input type="text" id="utag" #txttitle/></div>  
+      </div>
+        <div class="row"></div>
+        <div class="cols"><label for="name">name</label>
+        <input type="text" id="uname" #txtname/></div>  
+      </div>
+</div>
+<div class="row">
+    
+    <div class="col"><input type="button" value="Save" (click)="saveMedia(txttitle, txtdescription, txttitle, txtname)" />
+ </div>
+  <app-Media-List[MediaList]="Medias"></app-Media-List>
+ 
+  
