@@ -1,0 +1,31 @@
+<div>
+    <h1>Login details</h1>
+    <form  [formGroup]="myFormGroup"  (ngSubmit)="saveLogin()" > 
+    <div class="row">
+        <div class="col"><label for="">Enter username</label></div>
+        <div class="col">
+          <input type="text" name="uname"  [formControl]="myLogin" />
+          <span *ngIf="!myFormGroup.controls['login_name'].valid && myFormGroup.controls['Login_name'].dirty" class="bg-warning"> name required!!!</span>
+        </div>
+    <div class="row">
+        <div class="col"><label for="">Enter Password</label></div>
+        <div class="col">
+        <input type="text" name="upassword"  [formControl]="myLogin" />
+        <span *ngIf="!myFormGroup.controls['login_password'].valid && myFormGroup.controls['Login_password'].dirty" class="bg-warning">password required!!!</span>
+        </div>
+</div>
+<div class="row">
+    
+    <div class="col"><input type="submit" value="Save" [disabled]="!myFormGroup.valid" /></div>
+ </div>
+</form>
+
+<div *ngIf="!myFormGroup.valid && myFormGroup.dirty" class="bg-danger">
+  <h3>Incomplete Information!!!</h3>
+</div>
+
+<h2>NAME : {{name}}</h2>
+<h2>PASSWORD : {{password}}</h2>
+</div>
+ 
+  
