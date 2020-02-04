@@ -1,0 +1,42 @@
+
+<div class="container">
+        <div class="row justify-content-start mb-3">
+            <div class="col-sm-9">
+             <h1>LOGIN</h1>
+  <div class="bg-info" style="height: 500px;">
+    <div *ngIf="!autherized" class="text-danger">
+        <h3>{{errorMessage}}</h3>
+      </div>
+    <br/>
+    <form [formGroup]="myFormGroup"  (ngSubmit)="login()">
+        <div class=" row form-group">
+            <label for="UserName" class="col-sm-3">UserName</label>
+             <div class="col-sm-3">
+                  <input type="text" #txtLogin name="uname" [formControl]="myFormGroup.controls['username']" placeholder="UserName">
+                    </div>
+                    <div class="col-sm-6">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3">Password</label>
+                    <div class="col-sm-3">
+                        <input type="password" #txtPass name="upass" [formControl]="myFormGroup.controls['password']" placeholder="Password">
+                    </div>
+                    <div class="col-sm-6">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="offset-3 col-sm-9 mt-4">
+                        <button type="button" class="btn  btn-primary mb-3" (click)="checkLogin(txtLogin, txtPass)">Signin</button>&nbsp;<button [routerLink]="['/register']"  type="button"  class="btn  btn-primary mb-3" >Register</button> 
+                    </div>
+                </div>
+    </form>
+    </div>
+    </div>
+  </div>
+
+
+
+
+
+  
