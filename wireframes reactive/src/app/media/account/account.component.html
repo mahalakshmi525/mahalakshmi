@@ -1,0 +1,29 @@
+
+  <div class="container mt-5">
+    <div class="row">
+        <aside class="col-sm-3 mr-10">
+            <div  class="mr-5">
+                <div class="row justify-content-center mb-4">
+                    <u>Account</u>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex flex-column">
+                <div class="p-2">
+                    <button type="button" class="btn btn-primary w-75" [routerLink]="['/newsfeed']">Newsfeed</button>
+                </div>
+                <div class="p-2">
+                    <button type="button" class="btn btn-primary w-75 " [routerLink]="['/AccountUpdate']">AccountUpdate</button>
+                </div>
+                <div class="p-2">
+                  <button type="button" class="btn btn-primary w-75" [routerLink]="['/blockeduser']">Blockedaccounts</button>
+              </div>
+                <div class="p-2">
+                    <button type="button" class="btn btn-primary w-75" [routerLink]="['/search']">Search</button>
+                </div>
+                <div class="p-2">
+                    <button type="button" class="btn btn-primary w-75" [routerLink]="['/logout']" (click)="auth.logout()">Logout</button>
+                </div>
+            </div>
+        </aside> 
+    </div>
