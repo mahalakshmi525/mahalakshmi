@@ -3,6 +3,10 @@ package com.cts.training.mavenweb.entity;
 import java.time.LocalDateTime;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
 import javax.persistence.Column;
 
 @Table(name = "media")
@@ -39,10 +43,11 @@ public class Media {
 	@Column
 	private boolean hide;
 	
-	
+	@CreationTimestamp
 	@Column
 	private LocalDateTime createdon;
 	
+	@UpdateTimestamp
 	@Column
 	private LocalDateTime updatedon;
 	

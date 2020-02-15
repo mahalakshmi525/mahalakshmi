@@ -6,6 +6,8 @@ import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 @Table(name = "comments")
 
 public class Comments {
@@ -22,6 +24,7 @@ public class Comments {
 	@Column
 	private String comment;
 	
+	@CreationTimestamp
 	@Column
 	private LocalDateTime createdon;
 	

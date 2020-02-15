@@ -6,6 +6,8 @@ import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 @Table(name = "action")
 
 public class Action {
@@ -22,6 +24,7 @@ public class Action {
 		@Column
 		private boolean status;
 		
+		@CreationTimestamp
 		@Column
 		private LocalDateTime createdon;
 

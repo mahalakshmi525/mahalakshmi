@@ -5,6 +5,9 @@ import javax.persistence.Id;
 import javax.persistence.Column;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
 @Table(name = "users")
 
 public class Users {
@@ -24,10 +27,11 @@ public class Users {
 	@Column
 	private String profile;
 	
-	
+	@CreationTimestamp
 	@Column
 	private LocalDateTime createdon;
 	
+	@UpdateTimestamp
 	@Column
 	private LocalDateTime updatedon;
 	

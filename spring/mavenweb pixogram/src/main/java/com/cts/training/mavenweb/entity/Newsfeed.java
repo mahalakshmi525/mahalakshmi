@@ -6,6 +6,8 @@ import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 @Table(name = "newsfeed")
 
 public class Newsfeed {
@@ -22,6 +24,7 @@ public class Newsfeed {
 		@Column
 		private String feed;
 		
+		@CreationTimestamp
 		@Column
 		private LocalDateTime createdon;
 		
